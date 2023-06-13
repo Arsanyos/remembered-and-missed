@@ -25,9 +25,8 @@ const TopBar = () => {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:justify-between">
-                <div className="flex flex-shrink-0 items-center">
+                <div className="flex flex-shrink-0 items-center hidden sm:block">
                   <Image
-            
                     width={200}
                     height={90}
                     src="/logo.svg"

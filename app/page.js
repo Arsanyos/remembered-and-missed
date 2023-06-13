@@ -1,14 +1,34 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-      </div> */}
+    <main className="flex min-h-screen flex-col justify-between">
+      <div id="hero-section" className="flex justify-center h-[65vh] sm:h-[85vh]">
+        <div
+          id="hero-section-content"
+          className="absolute flex flex-col items-center justify-center gap-2 pt-28 w-[900px]"
+        >
+          <h1 className="font-[Lora] leading-normal text-[#FFFFFF] text-center w-[400px] sm:w-[600px] lg:w-auto text-[20px] sm:text-[55px]">
+            PRESERVE AND SHARE MEMORIES OF YOUR
+          </h1>
+          <p className="text-center text-[30px] text-[#FFFFFF] sm:text-[50px] font-400">Loved ones</p>
+
+          <p className="text-center leading-[27px] text-white text-[16px] sm:text-[22px] font-600 font-[Lora] w-[350px] sm:w-[600px]">
+            Join our compassionate community as we weave together the threads of
+            remembrance, sharing stories, photos, and tributes that celebrate
+            the legacies that continue to inspire us.
+          </p>
+          <button className="w-[279px] h-[52px] rounded-[25px] text-[#5C5470] bg-[#FFFFFF] font-bold mt-6 ">
+            Create A Memorial
+          </button>
+        </div>
+        <Image
+          width={1900}
+          height={200}
+          src="/images/Image-Hero-section.png"
+          alt="image-hero-section"
+        />
+      </div>
     </main>
-  )
+  );
 }
