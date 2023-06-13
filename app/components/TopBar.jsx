@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -40,7 +40,7 @@ const TopBar = () => {
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                   <a
-                    href="#"
+                    href="/"
                     className="inline-flex items-center border-b-2 border-indigo-500 px-2 pt-1 pb-1 text-sm font-medium text-[#5C5470] tracking-wider"
                   >
                     HOME
@@ -75,10 +75,12 @@ const TopBar = () => {
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button onClick={()=>{
-                      router.push('/login')
-                    }} className="text-white w-[122px] bg-[#5C5470] p-[10px] rounded-[20px]">
-                      <span className="sr-only">Open user menu</span>
+                    <Menu.Button
+                      onClick={() => {
+                        router.push("/login");
+                      }}
+                      className="text-white w-[122px] bg-[#5C5470] p-[10px] rounded-[20px]"
+                    >
                       Login
                     </Menu.Button>
                   </div>
