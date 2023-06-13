@@ -1,12 +1,16 @@
+'use client'
+
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import { useRouter } from 'next/navigation'
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 const TopBar = () => {
+  const router = useRouter();
   return (
     <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (
@@ -71,7 +75,9 @@ const TopBar = () => {
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="text-white w-[122px] bg-[#5C5470] p-[10px] rounded-[20px]">
+                    <Menu.Button onClick={()=>{
+                      router.push('/login')
+                    }} className="text-white w-[122px] bg-[#5C5470] p-[10px] rounded-[20px]">
                       <span className="sr-only">Open user menu</span>
                       Login
                     </Menu.Button>
