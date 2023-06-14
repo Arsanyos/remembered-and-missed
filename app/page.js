@@ -168,14 +168,11 @@ export default function Home() {
           <SearchBar />
         </div>
       </div>
-      <div
-        id="features-container"
-        className="w-[100%] h-auto mb-10 bg-[#FFFFFF]"
-      >
+      <div id="features-container" className="w-[100%] h bg-[#FFFFFF]">
         <p className="text-center text-[35px] text-[#5C5470] font-[Lora] font-semibold tracking-wide leading-8 mt-10">
           Remember Forever, Share the Missed
         </p>
-        <div className="flex items-center p-28">
+        <div className="flex items-center p-28 pb-0">
           <div id="features" className="w-[60%] h-[30%] flex flex-wrap gap-8">
             {features.map((item, index) => {
               return (
@@ -217,6 +214,26 @@ export default function Home() {
               alt="ipad-mockup"
             />
           </div>
+        </div>
+      </div>
+      <div id="testimonials-section" className="w-[100%] bg-[#5C5470] flex flex-col items-center gap-12">
+        <p className="text-center text-[35px] text-[#FFFFFF] font-[Lora] font-semibold tracking-wide leading-8 mt-10">
+          TESTIMONIALS
+        </p>
+        <div className="w-[60%]">
+          <Image
+            width={50}
+            height={50}
+            src="/icons/Vector.png"
+            alt="quotes-icon"
+          />
+          <p className="font-[Montserrat] font-thin text-[16px] text-[#FFFFFF] leading-[38px] ">
+            Thank you - love the Father’s Day themes! So happy to see more
+            options! Will send any ideas I come up with! This website has been
+            my healing. I come to my dads site and meet with him in my mind.
+            Going through our memories together, whenever I want. I tell
+            everyone about your great website! Ty!!
+          </p>
         </div>
       </div>
     </main>
