@@ -13,12 +13,12 @@ const Footer = () => {
   ];
   const footerSocialLinksIcon = [
     "/icons/Insta.png",
-    "/icons/twitter.png",
+    "/icons/twitter.png", 
     "/icons/facebook.png",
   ];
   
   return (
-    <div className="bg-[#5C5470] flex justify-around  items-center py-2 mt-8">
+    <div className=" w-[100%] bg-[#5C5470] flex justify-around  items-center py-2 mt-8">
       <p className="text-[12px] w-[150px] font-normal text-center text-[#FFFFFF]">Copyright © 2023 Remebered and missed All rights reserved</p>
       <div className="flex gap-4">
         {footerLinks.map((item, index) => {

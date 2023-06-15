@@ -52,7 +52,7 @@ const TopBar = () => {
                     CREATE A MEMORIAL
                   </a>
                   <a
-                    href="#"
+                    href="/pricing"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 pb-1 text-sm font-medium text-[#5C5470] hover:border-gray-300 hover:text-gray-700"
                   >
                     PRICING
