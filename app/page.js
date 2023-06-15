@@ -216,11 +216,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="testimonials-section" className="w-[100%] bg-[#5C5470] flex flex-col items-center gap-12">
+      <div
+        id="testimonials-section"
+        className="w-[100%] bg-[#5C5470] flex flex-col items-center pb-5 gap-12"
+      >
         <p className="text-center text-[35px] text-[#FFFFFF] font-[Lora] font-semibold tracking-wide leading-8 mt-10">
           TESTIMONIALS
         </p>
-        <div className="w-[60%]">
+        <div className="w-[60%] flex flex-col gap-4 items-start">
           <Image
             width={50}
             height={50}
@@ -234,6 +237,57 @@ export default function Home() {
             Going through our memories together, whenever I want. I tell
             everyone about your great website! Ty!!
           </p>
+        </div>
+      </div>
+      <div
+        id="share-memorial-section"
+        className="flex flex-col items-center p-10 pb-0"
+      >
+        <div className="flex flex-col items-center gap-4 w-[70%] ">
+          <p className="text-center text-[35px] text-[#5C5470] font-[Lora] font-semibold tracking-wide leading-8">
+            WANT TO SHARE A MEMORIAL OF YOUR
+          </p>
+          <p className="text-center text-[30px] text-[#5C5470] sm:text-[50px] font-400">
+            Loved Ones
+          </p>
+        </div>
+        <div className="flex items-center gap-5">
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-sm font-thin text-[16px] text-[#5C5470] leading-6 text-gray-900"
+            >
+              SHARE MEMORIES OF
+            </label>
+            <div className="relative mt-1 rounded-md shadow-sm">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                className="block h-[40px] py-4 px-5 bg-[#DEE2E6] rounded-[50px] w-full  border-0 py-1.5 pr-10 text-red-900 ring-1 ring-transparent placeholder:text-red-300 focus:ring-2 focus:ring-transparent sm:text-sm sm:leading-6"
+                aria-invalid="true"
+                aria-describedby="email-error"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-sm font-thin text-invis text-[16px] text-transparent leading-6 text-gray-900"
+            >
+                  NONE
+            </label>
+            <div className="relative mt-1 rounded-md shadow-sm">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                className="block h-[40px] py-4 px-5 bg-[#DEE2E6] rounded-[50px] w-full  border-0 py-1.5 pr-10 text-red-900 ring-1 ring-transparent placeholder:text-red-300 focus:ring-2 focus:ring-transparent sm:text-sm sm:leading-6"
+                aria-invalid="true"
+                aria-describedby="email-error"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </main>
