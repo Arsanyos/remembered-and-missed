@@ -20,7 +20,7 @@ const LandingPage = () => {
           memories, and words of support.
         </p>
       </div>
-      <div className="w-full h-[100%] flex flex-col bg-[url('/images/container.svg')] bg-cover">
+      <div className="w-full mb-[-32px] pb-10 flex flex-col bg-[url('/images/container.svg')] bg-cover">
         <div className="mt-[250px] flex flex-col items-center gap-16">
           <p className="text-[35px] text-[#FFFFFF] text-center leading-[0.16px] font-normal font-[Lora]">
             Welcome to our memorial website
