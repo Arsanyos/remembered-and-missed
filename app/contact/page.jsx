@@ -46,8 +46,12 @@ const ContactPage = () => {
   };
   return (
     <div className="flex flex-col items-center h-auto">
-      <div className="w-[100vw] h-[40vh] bg-[#5C5470]"></div>
-      <div className="z-999 relative bottom-[150px] h-auto w-[80%] rounded-[25px] shadow-lg bg-[#FFFFFF] flex flex-wrap">
+      <div className="w-[100vw] flex justify-center items-start h-[40vh] bg-[#5C5470]">
+        <p className="font-[Lora] uppercase w-[45%] font-normal pt-8 my-8 text-[36px] text-white tracking-[0.2px] leading-[45px] text-center">
+          Love to hear from you get in touch
+        </p>
+      </div>
+      <div className="z-999 relative bottom-[90px] h-auto w-[80%] rounded-[25px] shadow-lg bg-[#FFFFFF] flex flex-wrap">
         <div className="w-[100%] py-[55px] px-[50px] flex flex-col">
           <div>
             <p className="text-[16px] text-[#5C5470] leading-[20px] tracking-[0.14px] font-[Montserrat]">

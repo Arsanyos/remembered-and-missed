@@ -1,0 +1,11 @@
+#privacy-radio {
+    appearance: none;
+    background-color: #fff;
+    margin: 4;
+    font: inherit;
+    color: #5C5470;
+    width: 22px;
+    height: 22px;
+    border: 0.15em solid #5C5470;
+    border-radius: 5px;
+  }
