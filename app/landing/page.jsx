@@ -10,7 +10,7 @@ const LandingPage = () => {
         alt="remebered-and-missed"
       />
       <div className="w-[70%] flex flex-col gap-8 items-center ">
-        <p className=" w-[70%] text-[45px] text-[#5C5470] text-center leading-[45px] px-18 font-[Lora] font-normal">
+        <p className=" w-[100%] sm:w-[70%] text-[35px] sm:text-[45px] text-[#5C5470] text-center leading-[45px] px-18 font-[Lora] font-normal">
           Losing a loved one is incredibly painful, and very personal.
         </p>
         <p className="uppercase text-[#5C5470] font-[Montserrat] font-normal leading-[30px]">
@@ -20,9 +20,9 @@ const LandingPage = () => {
           memories, and words of support.
         </p>
       </div>
-      <div className="w-full mb-[-32px] pb-10 flex flex-col bg-[url('/images/container.svg')] bg-cover">
-        <div className="mt-[250px] flex flex-col items-center gap-16">
-          <p className="text-[35px] text-[#FFFFFF] text-center leading-[0.16px] font-normal font-[Lora]">
+      <div className="w-full mb-[-32px] pb-10 flex flex-col bg-[#5C5470] sm:bg-[url('/images/container.svg')] bg-cover">
+        <div className=" mt-20 sm:mt-[250px] flex flex-col items-center gap-16">
+          <p className=" text-[25px] sm:text-[35px] text-[#FFFFFF] text-center leading-[0.16px] font-normal font-[Lora]">
             Welcome to our memorial website
           </p>
           <p className="w-[70%] text-[#FFFFFF] text-[18px] leading-[26px] font-[Montesrrat]">

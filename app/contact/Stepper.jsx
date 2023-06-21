@@ -23,7 +23,7 @@ const Stepper = ({ curr, setCurr }) => {
               style={{
                 color: curr === index ? "#5C5470" : "rgba(92, 84, 112, 0.3)",
               }}
-              className="text-[19px]  font-[Montserrat] font-[600] leading-[20px] tracking-[0.2px]"
+              className="text-sm sm:text-base lg:text-lg font-[Montserrat] font-semibold leading-5 sm:leading-6 lg:leading-7 tracking-[0.2px]"
             >
               {item}
             </p>
