@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Logo from "../../public/images/container.svg";
 const LandingPage = () => {
   return (
     <div className="flex flex-col gap-4  items-center w-[100%] mt-[5%]">
