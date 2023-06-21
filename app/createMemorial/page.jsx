@@ -55,7 +55,7 @@ const CreateMemorialPage = () => {
       </div>
       <Stepper curr={curr} setCurr={setCurr} />
       <div className="z-999 h-auto w-[80%] rounded-[25px] shadow-lg bg-[#FFFFFF] flex flex-wrap">
-        <div className="w-[100%] py-[55px] px-[50px] flex flex-col">
+        <div className="w-[100%] py-[55px] px-[10px] flex flex-col">
           <Formik
             initialValues={initialValues}
             initialErrors={initialErrors}

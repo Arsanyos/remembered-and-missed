@@ -3,42 +3,42 @@ import { BsExclamationCircleFill } from "react-icons/bs";
 const AccountDetailComp = ({ curr }) => {
   return (
     <div
-      style={{
-        display: curr === 1 ? "block" : "none",
-      }}
+    style={{
+      display: curr === 1 ? "block" : "none",
+    }}
       id="login-container"
     >
-      <div className="w-[100%] h-auto flex flex-wrap py-[35px] px-[10px] rounded-[25px] shadow-customFigma ">
+      <div className=" h-auto flex flex-wrap">
         <div
           id="first-login-half"
-          className="flex flex-col items-center justify-center gap-5 py-[100px] px-[30px]  w-[40%]"
+          className="flex flex-col items-center justify-center gap-5 py-8 px-4 sm:px-10 md:px-12 lg:w-1/2"
         >
-          <h3 className="text-center text-[#5C5470] text-[25px] leading-[32px] font-500">
+          <h3 className="text-center text-[#5C5470] text-xl md:text-2xl lg:text-3xl leading-[32px] font-medium">
             Sign in to proceed and create a memorial for your
           </h3>
-          <p className="text-[#5C5470] text-center text-[30px] font-400">
+          <p className="text-[#5C5470] text-center text-2xl md:text-3xl lg:text-4xl font-normal">
             Loved ones
           </p>
           <Image src="/arrow.svg" width={100} height={20} alt="arrow-icon" />
         </div>
-        <div id="second-login-half" className="w-[60%] p-10 ">
-          <div className="shadow-customFigma rounded-[20px] p-10 flex flex-col gap-10 ">
-            <div className="flex justify-between items-center">
-              <h1 className="text-[35px] text-[#5C5470] leading-[44px] font-500 font-[Lora]">
+        <div id="second-login-half" className="w-[100%] lg:w-1/2 ">
+          <div className="shadow-customFigma rounded-lg p-4 sm:p-6 md:p-8 flex flex-col gap-4 lg:gap-10">
+            <div className="flex flex-wrap justify-between items-center">
+              <h1 className="text-1xl md:text-2xl lg:text-3xl text-[#5C5470] leading-[44px] font-medium font-serif">
                 LOGIN
               </h1>
               <div className="flex flex-col">
-                <span className="font-[Montserrat] text-[#5C5470] font-400 text-[18px]">
+                <span className="font-medium text-[#5C5470] text-xl md:text-1xl lg:text-1xl">
                   Create your account
                 </span>
-                <button className="flex items-center gap-2 font-[Montserrat] text-[#5C5470] font-extrabold text-[18px]">
+                <button className="flex items-center gap-2 font-medium text-[#5C5470] text-xl md:text-2xl lg:text-3xl">
                   Sign-up{" "}
                   <Image
                     src="/arrow.svg"
                     width={20}
                     height={20}
                     alt="arrow-icon"
-                  />{" "}
+                  />
                 </button>
               </div>
             </div>
@@ -46,7 +46,7 @@ const AccountDetailComp = ({ curr }) => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium leading-6 text-gray-900"
+                  className="block text-sm md:text-base font-medium leading-6 text-gray-900"
                 >
                   Email
                 </label>
@@ -55,7 +55,7 @@ const AccountDetailComp = ({ curr }) => {
                     type="email"
                     name="email"
                     id="email"
-                    className="block py-4 px-5 bg-[#DEE2E6] rounded-[30px] w-full rounded-md border-0 py-1.5 pr-10 text-red-900 ring-1 ring-transparent placeholder:text-red-300 focus:ring-2 focus:ring-transparent sm:text-sm sm:leading-6"
+                    className="block py-4 px-5 bg-[#DEE2E6] rounded-md w-full border-0 py-1.5 pr-10 text-red-900 ring-1 ring-transparent placeholder:text-red-300 focus:ring-2 focus:ring-transparent sm:text-base md:text-lg lg:text-xl"
                     placeholder="you@example.com"
                     defaultValue="adamwathan"
                     aria-invalid="true"
@@ -80,7 +80,7 @@ const AccountDetailComp = ({ curr }) => {
               <div>
                 <label
                   htmlFor="password"
-                  className="block text-sm font-medium leading-6 text-gray-900"
+                  className="block text-sm md:text-base font-medium leading-6 text-gray-900"
                 >
                   Password
                 </label>
@@ -89,7 +89,7 @@ const AccountDetailComp = ({ curr }) => {
                     type="password"
                     name="password"
                     id="password"
-                    className="block py-4 px-5 bg-[#DEE2E6] rounded-[30px] w-full rounded-md border-0 py-1.5 pr-10 text-red-900 ring-1 ring-transparent placeholder:text-red-300 focus:ring-2 focus:ring-transparent sm:text-sm sm:leading-6"
+                    className="block py-4 px-5 bg-[#DEE2E6] rounded-md w-full border-0 py-1.5 pr-10 text-red-900 ring-1 ring-transparent placeholder:text-red-300 focus:ring-2 focus:ring-transparent sm:text-base md:text-lg lg:text-xl"
                     placeholder="you@example.com"
                     defaultValue="adamwathan"
                     aria-invalid="true"
@@ -110,7 +110,7 @@ const AccountDetailComp = ({ curr }) => {
                 </p>
               </div>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex flex-wrap justify-between items-center">
               <div className="relative flex items-start">
                 <div className="flex h-6 items-center">
                   <input
@@ -124,20 +124,20 @@ const AccountDetailComp = ({ curr }) => {
                 <div className="ml-3 text-sm leading-6">
                   <label
                     htmlFor="comments"
-                    className="font-medium text-[18px] text-[#5C5470]"
+                    className="font-medium text-lg lg:text-xl text-[#5C5470]"
                   >
                     Remember Me?
-                  </label>{" "}
+                  </label>
                 </div>
               </div>
-              <span className="text-[18px] text-[#5C5470]">
+              <span className="text-lg lg:text-xl text-[#5C5470]">
                 Forgot password?
               </span>
             </div>
-            <button className="text-white w-full bg-[#5C5470] p-[10px] rounded-[20px]">
+            <button className="text-white w-full bg-[#5C5470] p-2 rounded-lg text-xl md:text-2xl lg:text-3xl">
               Login
             </button>
-            <button className="text-white w-full bg-transparent border-[#5C5470] p-[10px] rounded-[20px]">
+            <button className="text-white w-full bg-transparent border-[#5C5470] p-2 rounded-lg text-xl md:text-2xl lg:text-3xl">
               asdasd
             </button>
           </div>
