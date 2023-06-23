@@ -1,19 +1,22 @@
 "use client";
 
-import { Fragment, useEffect } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useSelector } from "react-redux";
-import { BsChevronDown } from "react-icons/bs";
+import { usePathname, useRouter } from "next/navigation";
+import { Fragment } from "react";
 
+import { BsChevronDown } from "react-icons/bs";
+import { useDispatch, useSelector } from "react-redux";
+import { loggin } from "../login/redux/login.slice";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 const TopBar = () => {
+  const pathname = usePathname();
   const router = useRouter();
+  const dispatch = useDispatch();
   const loggedIn = useSelector((state) => state.auth.loggedIn);
   return (
     <Disclosure as="nav" className="bg-white shadow">
@@ -44,31 +47,56 @@ const TopBar = () => {
                 <div className="hidden sm:ml-6 md:flex sm:space-x-8">
                   <a
                     href="/"
-                    className="inline-flex items-center border-b-2 border-indigo-500 px-2 pt-1 pb-1 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-[14px] font-medium text-[#5C5470] tracking-wider"
+                    className={classNames(
+                      pathname === "/"
+                        ? "border-indigo-500"
+                        : "border-transparent",
+                      "inline-flex items-center border-b-2 px-2 pt-1 pb-1 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-[14px] font-medium text-[#5C5470] tracking-wider"
+                    )}
                   >
                     HOME
                   </a>
                   <a
-                    href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 pb-1 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-[14px] font-medium text-[#5C5470] hover:border-gray-300 hover:text-gray-700"
+                    href="/createMemorial"
+                    className={classNames(
+                      pathname === "/createMemorial"
+                        ? "border-indigo-500"
+                        : "border-transparent",
+                      "inline-flex items-center border-b-2 px-2 pt-1 pb-1 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-[14px] font-medium text-[#5C5470] tracking-wider"
+                    )}
                   >
                     CREATE A MEMORIAL
                   </a>
                   <a
                     href="/pricing"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 pb-1 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-[14px] font-medium text-[#5C5470] hover:border-gray-300 hover:text-gray-700"
+                    className={classNames(
+                      pathname === "/pricing"
+                        ? "border-indigo-500"
+                        : "border-transparent",
+                      "inline-flex items-center border-b-2 px-2 pt-1 pb-1 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-[14px] font-medium text-[#5C5470] tracking-wider"
+                    )}
                   >
                     PRICING
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 pb-1 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-[14px] font-medium text-[#5C5470] hover:border-gray-300 hover:text-gray-700"
+                    className={classNames(
+                      pathname === "/pricing"
+                        ? "border-indigo-500"
+                        : "border-transparent",
+                      "inline-flex items-center border-b-2 px-2 pt-1 pb-1 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-[14px] font-medium text-[#5C5470] tracking-wider"
+                    )}
                   >
                     ABOUT
                   </a>
                   <a
-                    href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 pb-1 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-[14px] font-medium text-[#5C5470] hover:border-gray-300 hover:text-gray-700"
+                    href="/contact"
+                    className={classNames(
+                      pathname === "/contact"
+                        ? "border-indigo-500"
+                        : "border-transparent",
+                      "inline-flex items-center border-b-2 px-2 pt-1 pb-1 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-[14px] font-medium text-[#5C5470] tracking-wider"
+                    )}
                   >
                     CONTACT
                   </a>
@@ -110,7 +138,7 @@ const TopBar = () => {
                         <Menu.Item>
                           {({ active }) => (
                             <a
-                              href="#"
+                              href="/account"
                               className={classNames(
                                 active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm text-gray-700"
@@ -141,6 +169,10 @@ const TopBar = () => {
                                 active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
+                              onClick={() => {
+                                dispatch(loggin(false));
+                                document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                              }}
                             >
                               Sign out
                             </a>
