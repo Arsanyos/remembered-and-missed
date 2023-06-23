@@ -1,3 +1,6 @@
+// "use server"
+"use client"
+
 import Image from "next/image";
 const LandingPage = () => {
   return (
@@ -19,7 +22,7 @@ const LandingPage = () => {
           memories, and words of support.
         </p>
       </div>
-      <div className="w-full mb-[-32px] pb-10 flex flex-col bg-[#5C5470] sm:bg-[url('/images/container.svg')] bg-cover">
+      <div className="w-full mb-[-32px] pb-10 flex flex-col sm:bg-[url('/images/container.svg')] sm:bg-cover">
         <div className=" mt-20 sm:mt-[250px] flex flex-col items-center gap-16">
           <p className=" text-[25px] sm:text-[35px] text-[#FFFFFF] text-center leading-[0.16px] font-normal font-[Lora]">
             Welcome to our memorial website
