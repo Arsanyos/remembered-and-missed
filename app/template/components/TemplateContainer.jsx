@@ -5,15 +5,19 @@ import Image from "next/image";
 //
 import Divider from "@/app/components/Divider";
 import Stories from "./NavContens/Stories";
+import Visitors from "./NavContens/Visitors";
+import Privacy from "./NavContens/Privacy";
+import MusicComp from "./NavContens/Music";
+import About from "./NavContens/About";
+//
 import InnerSidebar from "./InnerSidebar";
 const TemplateContainer = () => {
   const [navItem, setNavItem] = useState(0);
   const navItems = ["about", "life", "gallery", "stories", "admin"];
   return (
-    <div className="w-[100%] h-[100%] flex flex-col">
-
-      <div className="relative bg-[url('/images/demoTemplateHead.svg')] bg-cover bg-center h-[35%] mb-28">
-        <div className="flex justify-between gap-2 absolute -bottom-10 left-10">
+    <div className="w-[100%] h-[100%] flex flex-col ">
+      <div className="bg-[url('/images/demoTemplateHead.svg')] bg-cover bg-center h-[200px] w-[100%] mb-24">
+        <div className="flex justify-between gap-2 w-[42%] relative top-24 left-12">
           <Image
             alt="deceased-pro-pic"
             src="/images/demoProfile.svg"
@@ -21,8 +25,8 @@ const TemplateContainer = () => {
             height={150}
             width={150}
           />
-          <div className="flex flex-col items-start gap-1 self-end relative top-10">
-            <div className="flex gap-4">
+          <div className="flex flex-col justify-end gap-1 relative top-8">
+            <div className="flex gap-4 relative">
               <p className="text-[#5C5470] text-[30px] font-[Lora] font-semibold leading-[32px]">
                 MARINA BURNS
               </p>
@@ -61,18 +65,18 @@ const TemplateContainer = () => {
         </ul>
         <Divider />
       </div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 mt-10">
         <div className="w-[75%] flex justify-center">
           {navItem === 0 ? (
-            <>0</>
+            <About />
           ) : navItem === 1 ? (
             <>1</>
           ) : navItem === 2 ? (
-            <>2</>
+            <Privacy />
           ) : navItem === 3 ? (
             <Stories />
           ) : navItem === 4 ? (
-            <>4</>
+            <MusicComp />
           ) : (
             <>Default</>
           )}
