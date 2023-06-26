@@ -14,6 +14,7 @@ import Reply from "../public/icons/reply.png";
 //
 import SearchBar from "./components/SearchBar";
 export default function Home() {
+
   const stats = [
     {
       value: "230K+",
