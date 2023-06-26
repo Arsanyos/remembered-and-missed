@@ -15,7 +15,6 @@ import Loading from "./components/Loading";
 import store from "@/lib/store";
 import { checkCookie } from "@/lib/functions";
 //
- 
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,8 +51,8 @@ export default function RootLayout({ children }) {
           ) : (
             children
           )}
-          <Footer />
         </body>
+        <Footer />
       </html>
     </Provider>
   );

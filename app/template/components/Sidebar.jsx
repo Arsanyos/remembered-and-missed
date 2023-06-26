@@ -27,8 +27,8 @@ const Sidebar = () => {
   return (
     <div
       className={`${
-        isMenuOpen ? "w-[25%]" : "w-[5%]"
-      } lg:w-[25%] max-h-[100%] bg-transparent lg:bg-[#F5F5F5] flex flex-col gap-8 p-8 pt-1`}
+        isMenuOpen ? "w-[28%]" : "w-[5%]"
+      } lg:w-[28%] max-h-[100%] bg-transparent lg:bg-[#F5F5F5] flex flex-col gap-8 p-8 pt-1`}
     >
       <button
         className="lg:hidden block flex justify-start ml-1"
