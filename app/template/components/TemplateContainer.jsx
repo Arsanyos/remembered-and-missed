@@ -11,6 +11,7 @@ const TemplateContainer = () => {
   const navItems = ["about", "life", "gallery", "stories", "admin"];
   return (
     <div className="w-[100%] h-[100%] flex flex-col">
+
       <div className="relative bg-[url('/images/demoTemplateHead.svg')] bg-cover bg-center h-[35%] mb-28">
         <div className="flex justify-between gap-2 absolute -bottom-10 left-10">
           <Image
@@ -39,10 +40,9 @@ const TemplateContainer = () => {
           </div>
         </div>
       </div>
-      <div className="h-[75%]">
-      
-      <div className="w-full flex flex-col justify-between">
-        <ul className="w-[60%] flex justify-evenly items-center max-w-md text-gray-500 list-none list-inside uppercase dark:text-gray-400 mx-auto">
+
+      <div className="w-[100%] flex flex-col justify-between">
+        <ul className="flex justify-center gap-12 items-center text-gray-500 list-none list-inside uppercase dark:text-gray-400">
           {navItems.map((item, index) => {
             return (
               <li
@@ -62,7 +62,7 @@ const TemplateContainer = () => {
         <Divider />
       </div>
       <div className="flex gap-2">
-        <div className="w-[75%]">
+        <div className="w-[75%] flex justify-center">
           {navItem === 0 ? (
             <>0</>
           ) : navItem === 1 ? (
@@ -78,7 +78,6 @@ const TemplateContainer = () => {
           )}
         </div>
         <InnerSidebar />
-      </div>
       </div>
     </div>
   );
